@@ -11,7 +11,7 @@ const express = require('express'),
       dealApi = require('./src/router/deal');
 
 app.all('*',function (req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'http://192.168.3.57:8080');//配置跨域
+  res.header('Access-Control-Allow-Origin', 'http://119.3.144.14:8095');//配置跨域
   res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, PATCH, DELETE, OPTIONS');
   res.setHeader('Content-Type', 'text/html; charset=utf-8')
