@@ -3,7 +3,7 @@ import store from '../store/index';
 import { getToken, logout } from '../utils/Constant';
 
 const req = axios.create({
-        baseURL: 'http://192.168.3.57:8090/api',
+        baseURL: 'http://119.3.144.14:8090/api',
         timeout: 20000
     }), axiosSources: any[] = [];
 
