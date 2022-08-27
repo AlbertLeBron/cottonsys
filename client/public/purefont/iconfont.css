@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "purefont"; /* Project id 3551806 */
+  src: url('iconfont.woff2?t=1659357600680') format('woff2'),
+       url('iconfont.woff?t=1659357600680') format('woff'),
+       url('iconfont.ttf?t=1659357600680') format('truetype');
+}
+
+.purefont {
+  font-family: "purefont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pure-attention:before {
+  content: "\e69f";
+}
+
+.pure-refresh:before {
+  content: "\eaf4";
+}
+
+.pure-ok:before {
+  content: "\e625";
+}
+
+.pure-warning:before {
+  content: "\e68b";
+}
+
+.pure-close:before {
+  content: "\e724";
+}
+
+.pure-o_close:before {
+  content: "\e725";
+}
+
+.pure-ellipsis:before {
+  content: "\e62e";
+}
+
+.pure-o_left:before {
+  content: "\e743";
+}
+
+.pure-o_right:before {
+  content: "\e74e";
+}
+
+.pure-left:before {
+  content: "\eb90";
+}
+
+.pure-right:before {
+  content: "\eb9e";
+}
+
+.pure-list:before {
+  content: "\e6e1";
+}
+
+.pure-search:before {
+  content: "\e6e2";
+}
+

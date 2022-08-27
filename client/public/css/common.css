@@ -1,0 +1,565 @@
+html,body{
+  margin: 0;
+  height: 100%;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2c3e50;
+}
+
+* , ::before, ::after{
+  box-sizing: border-box;
+}
+
+.noTextSelect, .btn {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.btn {
+  padding: 8px 20px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.btn.commonBtn {
+  height: 30px;
+  line-height: 30px;
+  font-size: 15px;
+  padding: 0 30px;
+}
+
+.btn[disabled] {
+  opacity: .5;
+  cursor: not-allowed;
+}
+.btn.default {
+  border: 1px solid #2c3e50;
+  color: #2c3e50;
+}
+.btn.default:not([disabled]):hover, .btn.default.active {
+  background: #2c3e50;
+  color: #fff;
+}
+.btn.primary {
+  background: #0078d4;
+  color: #fff;
+}
+.btn.primary:not([disabled]):hover, .btn.primary.active {
+  background: rgba(0,103,181,1);
+}
+.btn.success {
+  background: #42b983;
+  color: #fff;
+}
+.btn.success:not([disabled]):hover, .btn.success.active {
+  background: #34a873;
+}
+.btn.danger {
+  background: #ff3547;
+  color: #fff;
+}
+.btn.danger:not([disabled]):hover, .btn.danger.active {
+  background: #d2322d;
+}
+
+input[type='text'],
+input[type='password'] {
+  box-shadow: none;
+  outline: none;
+  border: none;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+::-webkit-input-placeholder {
+  font-style: italic;
+  color: rgba(0, 0, 0, .5);
+}
+
+:-moz-placeholder {
+    font-style: italic;
+    color: rgba(0, 0, 0, .5);
+}
+
+::-moz-placeholder {
+    font-style: italic;
+    color: rgba(0, 0, 0, .5);
+}
+
+:-ms-input-placeholder {
+    font-style: italic;
+    color: rgba(0, 0, 0, .5);
+}
+
+.inputWrap {
+  border: 1px solid #2c3e50;
+  height: 30px;
+  position: relative;
+  padding-right: 30px;
+}
+
+.inputWrap[isInvalid] {
+  border: 1px solid red;
+}
+
+.inputWrap input {
+  height: 100%;
+  background: none;
+  color: inherit;
+  font-size: 15px;
+  padding: 1px 2px 1px 10px;
+  width: 100%;
+}
+
+.inputWrap > span {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  color: #2c3e50;
+}
+
+.inputWrap > span.tip,
+.textAreaWrap > span.tip {
+  color: red;
+}
+
+.inputWrap > span.tip > i,
+.textAreaWrap > span.tip > i {
+  line-height: 30px;
+}
+
+.inputWrap > span.tip> em,
+.textAreaWrap > span.tip> em {
+  opacity: 0;
+  pointer-events: none;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 1px);
+}
+
+.inputWrap > span.tip> em > span,
+.textAreaWrap > span.tip> em > span {
+  position: absolute;
+  display: inline-block;
+  bottom: 14px;
+  right: -16px;
+  min-width: 200px;
+}
+
+.inputWrap > span.tip> em > span:before,
+.textAreaWrap > span.tip> em > span:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border-left: 3px solid transparent;
+  border-top: 5px solid rgba(0, 0, 0, .8);
+  border-right: 3px solid transparent;
+  right: 5px;
+  bottom: -5px;
+}
+
+.inputWrap > span.tip> em > span:after,
+.textAreaWrap > span.tip> em > span:after {
+  content: attr(u);
+  padding: 5px 10px;
+  min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #fff;
+  font: 13px/15px Helvetica Neue,helvetica,tahoma,arial,sans-serif;
+  background: rgba(0,0,0,.8);
+  -webkit-box-shadow: 0 2px 6px 0 rgb(0 0 0 / 50%);
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 50%);
+  word-break: break-word;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.inputWrap > span.tip:hover em,
+.textAreaWrap > span.tip:hover em {
+  opacity: 1;
+}
+
+.textAreaWrap {
+  border: 1px solid #2c3e50;
+  position: relative;
+  height: 100px;
+}
+
+.textAreaWrap .ps {
+  height: 100%;
+}
+
+.textAreaWrap .editableContent {
+  outline: none;
+  padding: 4px 10px;
+  min-height: 100%;
+  line-height: 20px;
+}
+
+.textAreaWrap .editableContent:empty:before {
+  content: attr(placeholder);
+  color: rgba(0, 0, 0, .5);
+  font-style: italic;
+}
+
+.textAreaWrap > span.tip {
+  position: absolute;
+  padding: 0 6px;
+  top: 0;
+  right: 0;
+}
+
+.dotload {
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  width: 16px;
+  animation: dot 1s infinite step-start both;
+  font-family: Consolas, Monaco, monospace;
+}
+
+@keyframes dot {
+  33% {
+      width: 5px;
+  }
+  66% {
+      width: 12px;
+  }
+}
+@-webkit-keyframes dot {
+  33% {
+      width: 5px;
+  }
+  66% {
+      width: 12px;
+  }
+}
+
+.iconBtn {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+.iconBtn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.iconBtn i:nth-child(2) {
+  opacity: 0;
+}
+
+.iconBtn:not([disabled]):hover i:nth-child(1) {
+  opacity: 0;
+}
+
+.iconBtn:not([disabled]):hover i:nth-child(2) {
+  opacity: 1;
+}
+
+.mx-calendar-content .cell.active {
+  background-color: #5da4f1!important;
+}
+
+.mx-datepicker-main {
+  color: inherit;
+}
+
+.dropdown-ui {
+  border: 1px solid #2c3e50;
+}
+
+.dropdown-ui .dropdown-filterWrap > input {
+  background: none!important;
+  font-size: 15px!important;
+}
+
+.mx-datepicker, .mx-datepicker.mx-datepicker-range {
+  width: auto;
+  border: 1px solid #2c3e50;
+  height: 30px;
+}
+
+.mx-datepicker .mx-input-wrapper {
+  height: 100%;
+  padding-right: 30px;
+}
+
+.mx-datepicker .mx-input-wrapper input[type='text'].mx-input {
+  background: initial;
+  height: 100%;
+  padding: 1px 2px 1px 10px;
+  line-height: initial;
+  font-size: 15px;
+  color: inherit;
+}
+
+.mx-datepicker .mx-icon-calendar {
+  color: inherit;
+  font-weight: lighter;
+}
+
+.vdp-datepicker {
+  z-index: 995;
+}
+
+.vdp-datepicker .vdp-datepicker__calendar .cell.selected{
+  color: #fff;
+  background: #5da4f1;
+}
+
+.resizingObject {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0;
+}
+
+.matchedField {
+  font-weight: bold;
+  background: yellow;
+}
+
+.tableWrap table {
+  width: 100%;
+  border-collapse:collapse;
+  font-size: 13px;
+}
+
+.tableWrap table thead {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 990;  
+}
+
+.tableWrap table thead tr {
+  background: #fff;;
+  box-shadow: inset 0 -2px 0 rgba(222, 226, 230);
+  height: 35px;
+}
+
+.tableWrap table thead tr th {
+  text-align: initial;
+  padding: 5px 10px;
+  word-break: break-word;
+}
+
+.tableWrap table thead tr th:first-child {
+  padding: 0;
+  width: 20px;
+}
+
+.tableWrap table thead tr th small {
+  transform: scale(0.9);
+  transform-origin: left bottom;
+  -webkit-transform: scale(0.9);
+  -webkit-transform-origin: left bottom;
+  display: inline-block;
+}
+
+.tableWrap table tbody tr {
+  height: 30px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.tableWrap table tbody tr.selected {
+  background: #f5f5f5;
+}
+
+.tableWrap table tbody tr:not(.selected):hover {
+  background: rgba(245,245,245,0.4);
+}
+
+.tableWrap table tbody tr + tr {
+  border-top: 1px solid #dee2e6;
+}
+
+.tableWrap table tbody tr td {
+  padding: 5px 10px;
+}
+
+.tableWrap table tbody tr td:first-child {
+  padding: 0;
+  width: 20px;
+}
+
+.tableWrap table tbody tr td.dataStateTip {
+  width: 100%;
+  text-align: center;
+}
+
+.tableWrap table tbody tr td.dataStateTip>div {
+  height: 100px;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.radio {
+  display: inline-flex;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.checkbox input, .radio input {
+  display: none;
+}
+
+.checkbox input:checked + span {
+  background: #5da4f1;
+}
+
+.radio input:checked + span {
+  background: #fff;
+  box-shadow: inset 0 0 0 5px #5da4f1;
+}
+
+.radio input[disabled] + span {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.checkbox input:checked + span:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: translate(-50%,-50%) rotate(45deg);
+  transform: translate(-50%,-50%) rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.checkbox span,
+.radio span {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  height: 16px;
+  width: 16px;
+  background: rgba(0,0,0,.15);
+}
+
+.radio span {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+
+.loading-circle-wrap {
+  position: relative;
+  height: 24px;
+}
+
+.loading-circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.loading-circle div {
+    transform-origin: 12px 12px;
+    animation: loading 1.2s linear infinite;
+}
+
+.loading-circle div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.loading-circle div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.8s;
+}
+
+.loading-circle div:nth-child(2) {
+    transform: rotate(40deg);
+    animation-delay: -0.7s;
+}
+
+.loading-circle div:nth-child(3) {
+    transform: rotate(80deg);
+    animation-delay: -0.6s;
+}
+
+.loading-circle div:nth-child(4) {
+    transform: rotate(120deg);
+    animation-delay: -0.5s;
+}
+
+.loading-circle div:nth-child(5) {
+    transform: rotate(160deg);
+    animation-delay: -0.4s;
+}
+
+.loading-circle div:nth-child(6) {
+    transform: rotate(200deg);
+    animation-delay: -0.3s;
+}
+
+.loading-circle div:nth-child(7) {
+    transform: rotate(240deg);
+    animation-delay: -0.2s;
+}
+
+.loading-circle div:nth-child(8) {
+    transform: rotate(280deg);
+    animation-delay: -0.1s;
+}
+
+.loading-circle div:nth-child(9) {
+    transform: rotate(320deg);
+    animation-delay: 0s;
+}
+
+@keyframes loading {
+  0% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "id": "3551806",
+  "name": "cottonsys_singlecolor",
+  "font_family": "purefont",
+  "css_prefix_text": "pure-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "27956390",
+      "name": "attention",
+      "font_class": "attention",
+      "unicode": "e69f",
+      "unicode_decimal": 59039
+    },
+    {
+      "icon_id": "5387529",
+      "name": "加载_刷新",
+      "font_class": "refresh",
+      "unicode": "eaf4",
+      "unicode_decimal": 60148
+    },
+    {
+      "icon_id": "355498",
+      "name": "ok",
+      "font_class": "ok",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "15838612",
+      "name": "warning-filling",
+      "font_class": "warning",
+      "unicode": "e68b",
+      "unicode_decimal": 59019
+    },
+    {
+      "icon_id": "577310",
+      "name": "关闭2-fill",
+      "font_class": "close",
+      "unicode": "e724",
+      "unicode_decimal": 59172
+    },
+    {
+      "icon_id": "577311",
+      "name": "关闭2",
+      "font_class": "o_close",
+      "unicode": "e725",
+      "unicode_decimal": 59173
+    },
+    {
+      "icon_id": "10408309",
+      "name": "contextual",
+      "font_class": "ellipsis",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "6802199",
+      "name": "Left-6",
+      "font_class": "o_left",
+      "unicode": "e743",
+      "unicode_decimal": 59203
+    },
+    {
+      "icon_id": "6802219",
+      "name": "Right-6",
+      "font_class": "o_right",
+      "unicode": "e74e",
+      "unicode_decimal": 59214
+    },
+    {
+      "icon_id": "6806935",
+      "name": "Left-6",
+      "font_class": "left",
+      "unicode": "eb90",
+      "unicode_decimal": 60304
+    },
+    {
+      "icon_id": "6806956",
+      "name": "Right-6",
+      "font_class": "right",
+      "unicode": "eb9e",
+      "unicode_decimal": 60318
+    },
+    {
+      "icon_id": "30913280",
+      "name": "列表",
+      "font_class": "list",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "30913281",
+      "name": "搜索",
+      "font_class": "search",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    }
+  ]
+}

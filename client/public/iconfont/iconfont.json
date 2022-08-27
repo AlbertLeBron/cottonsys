@@ -1,0 +1,23 @@
+{
+  "id": "3543216",
+  "name": "cottonsys",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1973188",
+      "name": "男头像",
+      "font_class": "avatar",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "30806255",
+      "name": "棉花",
+      "font_class": "mx",
+      "unicode": "e6d8",
+      "unicode_decimal": 59096
+    }
+  ]
+}
